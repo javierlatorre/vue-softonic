@@ -19,13 +19,9 @@
 
 <script>
 import nasa from '../api/nasa'
-import AppBody from '../components/body/AppBody'
 
 export default {
   name: 'home',
-  components: {
-    AppBody
-  },
   data() {
     return {
       pictureOfTheDay: {}

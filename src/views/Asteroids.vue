@@ -1,25 +1,36 @@
 <template>
   <div class="asteroids">
     <app-body>
-      <asteroids-list :asteroids="asteroids" />
+      <h1 class="w3-left-align">List of Near Earth Asteroids</h1>
+      <asteroids-list :asteroids="asteroids" @select-asteroid="selectAsteroid" />
     </app-body>
+    <asteroid-modal :asteroid="selectedAsteroid" @unselect-asteroid="unselectAsteroid" />
   </div>
 </template>
 
 <script>
 import nasa from '../api/nasa'
-import AppBody from '../components/body/AppBody'
+import AsteroidModal from '../components/asteroids/AsteroidModal'
 import AsteroidsList from '../components/asteroids/AsteroidsList'
 
 export default {
   name: 'asteroids',
   components: {
-    AppBody,
+    AsteroidModal,
     AsteroidsList
   },
   data() {
     return {
-      asteroids: []
+      asteroids: [],
+      selectedAsteroid: null
+    }
+  },
+  methods: {
+    selectAsteroid(asteroid) {
+      this.selectedAsteroid = asteroid
+    },
+    unselectAsteroid() {
+      this.selectedAsteroid = null
     }
   },
   created() {
