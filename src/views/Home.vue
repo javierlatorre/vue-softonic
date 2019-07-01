@@ -4,14 +4,29 @@
       <div class="picture-of-day">
         <h2 class="w3-left-align">Media of the day</h2>
 
-        <iframe class="picture-of-day__video" v-if="pictureOfTheDay.media_type === 'video'"
-          :src="pictureOfTheDay.url">
-        </iframe>
-        <img v-else :src="pictureOfTheDay.url" />
+        <iframe
+          class="picture-of-day__video"
+          v-if="pictureOfTheDay.media_type === 'video'"
+          :src="pictureOfTheDay.url"
+        />
+        <img
+          v-else
+          :src="pictureOfTheDay.url"
+        />
 
-        <p v-if="pictureOfTheDay.author" class="w3-left-align">Published by {{ pictureOfTheDay.author }}</p>  
-        <p v-if="pictureOfTheDay.date" class="w3-left-align w3-text-grey">{{ pictureOfTheDay.date }}</p>  
-        <p class="w3-left-align">{{ pictureOfTheDay.explanation }}</p>  
+        <p
+          v-if="pictureOfTheDay.author"
+          class="w3-left-align"
+        >
+          Published by {{ pictureOfTheDay.author }}
+        </p>
+        <p
+          v-if="pictureOfTheDay.date"
+          class="w3-left-align w3-text-grey"
+        >
+          {{ pictureOfTheDay.date }}
+        </p>
+        <p class="w3-left-align">{{ pictureOfTheDay.explanation }}</p>
       </div>
     </app-body>
   </div>
@@ -43,4 +58,3 @@ export default {
   }
 }
 </style>
-

@@ -2,9 +2,15 @@
   <div class="asteroids">
     <app-body>
       <h1 class="w3-left-align">List of Near Earth Asteroids</h1>
-      <asteroids-list :asteroids="asteroids" @select-asteroid="selectAsteroid" />
+      <asteroids-list
+        :asteroids="asteroids"
+        @select-asteroid="selectAsteroid"
+      />
     </app-body>
-    <asteroid-modal :asteroid="selectedAsteroid" @unselect-asteroid="unselectAsteroid" />
+    <asteroid-modal
+      :asteroid="selectedAsteroid"
+      @unselect-asteroid="unselectAsteroid"
+    />
   </div>
 </template>
 

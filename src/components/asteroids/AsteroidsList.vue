@@ -1,8 +1,19 @@
 <template>
   <ul class="asteroids-list w3-ul w3-card-2">
-    <li v-for="asteroid in asteroids" class="w3-bar" :key="asteroid.id">
-      <a href="javascript:void(0)" @click="selectAsteroid(asteroid)">
-        <img src="../../assets/asteroid.png" alt="Asteroid" class="asteroids-list__icon w3-bar-item">
+    <li
+      v-for="asteroid in asteroids"
+      class="w3-bar"
+      :key="asteroid.id"
+    >
+      <a
+        href="javascript:void(0)"
+        @click="selectAsteroid(asteroid)"
+      >
+        <img
+          src="../../assets/asteroid.png"
+          alt="Asteroid"
+          class="asteroids-list__icon w3-bar-item"
+        />
         <ul class="asteroids-list__properties w3-bar-item">
           <li><b>Name:</b> {{ asteroid.name }}</li>
           <li><b>Estimated diameter (km):</b> {{ asteroid.estimated_diameter.kilometers.estimated_diameter_max.toFixed(2) }}</li>
