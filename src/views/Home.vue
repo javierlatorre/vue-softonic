@@ -2,7 +2,7 @@
   <div class="home">
     <app-body>
       <div class="picture-of-day">
-        <h2 class="w3-left-align">Media of the day</h2>
+        <h2 class="w3-left-align">Media of the day{{ pictureOfTheDay.title ? `: ${pictureOfTheDay.title}` : '' }}</h2>
 
         <iframe
           class="picture-of-day__video"
