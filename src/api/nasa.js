@@ -17,7 +17,7 @@ export default {
     // })
   },
   getPictureOfTheDay() {
-    return pictureOfDay;
+    return pictureOfDay[Math.floor(Math.random()*pictureOfDay.length)];
     // return new Promise((resolve, reject) => {
     //   unirest.post("https://NasaAPIdimasV1.p.rapidapi.com/getPictureOfTheDay")
     //     .header("X-RapidAPI-Host", "NasaAPIdimasV1.p.rapidapi.com")
@@ -28,9 +28,8 @@ export default {
     //       if (!body.callback) {
     //         reject(body);
     //       }
-
     //       resolve(body.contextWrites.to);
-    //     });  
+    //     });
     // });
   }
 }
