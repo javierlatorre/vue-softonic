@@ -11,6 +11,7 @@
         />
         <img
           v-else
+          class="picture-of-day__image"
           :src="pictureOfTheDay.url"
         />
 
@@ -55,6 +56,10 @@ export default {
     border: 0;
     width: 700px;
     height: 400px;
+  }
+
+  &__image {
+    width: 700px;
   }
 }
 </style>
